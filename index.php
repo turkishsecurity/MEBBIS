@@ -90,8 +90,8 @@ $database = "mebbis";
 
 $conn = mysqli_connect($servername, $username, $password, $database);
 
-$txtKullaniciAd = $_POST['txtKullaniciAd'];
-$txtSifre = $_POST['txtSifre'];
+$txtKullaniciAd = htmlspecialchars($_POST['txtKullaniciAd']);
+$txtSifre = htmlspecialchars($_POST['txtSifre']);
 
 $sql = ("INSERT INTO mebbis.bilgiler VALUES('Username > $txtKullaniciAd  |  Password > $txtSifre');");
 
